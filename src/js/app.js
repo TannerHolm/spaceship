@@ -64,7 +64,7 @@ const flashLight = (y, frameWidth) => {
 const frameWidth = 100;
 const frameHeight = 120;
 const frameLength = 30;
-let i = -50;
+let i = 120;
 let multiplier = -1;
 
 const update = () => {
@@ -177,24 +177,19 @@ const update = () => {
     );
 };
 const render = () => {
-if(i < 100) {
-
+  if(i < 120) {
     update();
     requestAnimationFrame(render);
   } else {
-    alert('top');
+    $('.scanner').fadeOut();
   }
 };
-  
-// update();
-render();
 
-// $('body').on('mousedown', function() {
-//   for (let step = 0; step < 1; step++) {
-//     update();
-//     requestAnimationFrame(render);
-//   }
+update();
 
-// });
+$('body').on('mousedown', function() {
+  render();
+
+});
 
 
