@@ -1,4 +1,5 @@
 import $ from "jquery";
+
 if (module.hot) {
   module.hot.accept();
 }
@@ -187,7 +188,7 @@ const render = () => {
 
 update();
 
-$('body').on('mousedown', function() {
+$('body').on('touchstart mousedown', function() {
   render();
 
 });
